@@ -25,3 +25,7 @@ if __name__ == "__main__":
     while True:
         data = fetch_json_data()
         check_for_matches(data)
+
+# I am noticing an issue where flights that are no longer detected are being stored in the json file for 300 seconds after
+# they stop appearing in the localhost:8080 web window and will work to implement a way to only play a tone for a matching flight
+# that have a "seen" integer of > 10 so that they do not continue to play a tone after they are far out of range of the antenna
